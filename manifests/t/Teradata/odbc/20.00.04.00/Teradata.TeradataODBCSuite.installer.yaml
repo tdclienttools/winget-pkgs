@@ -1,0 +1,26 @@
+# Created with YamlCreate.ps1 v2.2.8 $debug=NVS1.CRLF.5-1-19041-2364.Win32NT
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.4.0.schema.json
+
+PackageIdentifier: Teradata.TeradataODBCSuite
+PackageVersion: 20.00.04.00
+InstallerLocale: en-US
+InstallerType: zip
+Scope: machine
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+InstallerSwitches:
+  Silent: /silent
+  SilentWithProgress: /silent
+  Custom: ALLARGS="{F075B63A-C629-41F8-BA56-33D9940F2000} 20.00 "ALL" ODBC"
+UpgradeBehavior: install
+Installers:
+- Architecture: x64
+  NestedInstallerType: exe
+  NestedInstallerFiles:
+  - RelativeFilePath: .\TeradataODBC\TTUSuiteSilent.exe
+  InstallerUrl: https://downloads.teradata.com/sites/default/files/2023-12/TeradataODBC__windows_indep.20.00.04.00_0.zip
+  InstallerSha256: 5165c36848ddc5b1d2b5c14e55d9990bcae08a12933d53454a5e12a4efb27e00
+ManifestType: installer
+ManifestVersion: 1.4.0
